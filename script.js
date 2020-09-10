@@ -2,7 +2,7 @@ const postsContainer = document.getElementById("posts-container");
 const loading = document.querySelector(".loader");
 const filter = document.getElementById("filter");
 
-let limit = 5;
+let limit = 7;
 let page = 1;
 
 // Fetch Post from API
@@ -100,7 +100,7 @@ showPosts();
 window.addEventListener("scroll", () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
-  if (scrollTop + clientHeight >= scrollHeight) {
+  if (scrollTop + clientHeight >= scrollHeight - 1) {
     showLoading();
   }
 });
